@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/antoniovazquezblanco/setup-ghidra/actions/workflows/main.yml/badge.svg)](https://github.com/antoniovazquezblanco/setup-ghidra/actions/workflows/main.yml)
 [![CodeQL](https://github.com/antoniovazquezblanco/setup-ghidra/actions/workflows/codeql.yml/badge.svg)](https://github.com/antoniovazquezblanco/setup-ghidra/actions/workflows/codeql.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/antoniovazquezblanco/setup-ghidra/badge)](https://scorecard.dev/viewer/?uri=github.com/antoniovazquezblanco/setup-ghidra)
 
 This action sets up a Ghidra environment for use in actions.
 Specific Ghidra versions can be selected and even releases from custom forks can be used.
@@ -20,7 +21,7 @@ This example just clones your code, setups java and setups Ghidra from the ofici
 steps:
   - uses: actions/checkout@v4
   - uses: actions/setup-java@v4
-  - uses: antoniovazquezblanco/setup-ghidra@v2.0.12
+  - uses: antoniovazquezblanco/setup-ghidra@v2
 ```
 
 **Advanced:**
@@ -39,7 +40,7 @@ steps:
   - uses: actions/checkout@v4
   - uses: actions/setup-java@v4
   - uses: gradle/actions/setup-gradle@v3
-  - uses: antoniovazquezblanco/setup-ghidra@v2.0.12
+  - uses: antoniovazquezblanco/setup-ghidra@v2
     with:
       auth_token: ${{ secrets.GITHUB_TOKEN }}
       version: ${{ matrix.ghidra }}
@@ -52,7 +53,7 @@ steps:
 For a full reference of action parameters see [action.yml](action.yml)
 
 ```yaml
-- uses: antoniovazquezblanco/setup-ghidra@v2.0.12
+- uses: antoniovazquezblanco/setup-ghidra@v2
   with:
     # A distribution download URL to directly download and install it.
     # If this argument is specified, both the repository and version arguments
